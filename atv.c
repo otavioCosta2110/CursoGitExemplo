@@ -1,16 +1,22 @@
 #include <stdio.h>
 
 int main(){
-	int n;
+	int n, i, total = 0;
 	printf("Digite um Numero Inteiro: \n");
 	scanf("%i", &n);
 	
-	if (n % 2 == 0){
-		printf("O numero e PAR");
-	}
-	else{
-		printf("O numero e IMPAR");
+	for (i = n; i >= 1; i --){
+		if (n % i == 0){
+			total++;
+		}	
 	}
 
+	if (total == 2){
+		printf("O numero E primo");
+	}
+	else{
+		printf("O numero NAO E primo");
+	}
 	return 0;
+
 }
